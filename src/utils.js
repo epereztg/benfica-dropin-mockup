@@ -1,6 +1,3 @@
-//const paymentsDefaultConfig = {
-//import store from './script'
-
 const defaultCurrency = 'EUR'
 const defaultCountry = 'PT'
 const defaultAmount = 100
@@ -34,7 +31,7 @@ const paymentMethodsConfig = {
     },
     merchantId: 'MH5P3AYBGR47S',
     paypal: {
-        merchantId: 'UZQDU74XMGU56',
+        merchantId: '',
         environment: "test",
         countryCode: defaultCountry,
         amount: {
@@ -51,7 +48,7 @@ const paymentsDefaultConfig = {
     returnUrl: 'http://localhost:3030/#/review',
     origin: 'http://localhost:3030/#/review',
     reference:'KIOSK-COMPONENTS',
-    shopperReference:'paybylink_shopperreference',
+    shopperReference:'myshopperreference',
     shopperEmail:'elena.pereztoril@adyen.com',
     countryCode: defaultCountry,
     amount: {
@@ -66,7 +63,7 @@ const paymentsDefaultConfig = {
       locale: defaultShopperLocale,
     },
     paypal: {
-        merchantId: 'UZQDU74XMGU56',
+        merchantId: '',
         environment: "test",
         countryCode: "ES",
         amount: {
@@ -96,10 +93,8 @@ const paymentsDefaultConfig = {
 };
 const httpPostnoJson = (endpoint, data) =>
     fetch(`/${endpoint}`, {
-    //fetch('https://cors-anywhere.herokuapp.com/https://checkout-test.adyen.com/v52/payment/details', {
         method: 'POST',
         headers: {
-           //'x-api-key': 'AQEyhmfxJ4nNahZBw0m/n3Q5qf3VaY9UCJ1+XWZe9W27jmlZioAYf+2FreEhmT7Cir0XxJkQwV1bDb7kfNy1WIxIIkxgBw==-XTmw1r1ZnD/6UzAw1cJNMD2rAamgo6u8VBkEsQtmSHU=-NGN65Cs8e2urFAvR' ,
             Accept: 'application/json, text/plain, */*',
             'Content-Type': 'application/json'
         },
@@ -159,9 +154,6 @@ const paymentDetails = (paymentData, details = {}) => {
       }
     }
      paymentRequest = { ...paymentRequest, ...{} };
-
-
-    //updateRequestContainer(paymentRequest);
 
     return httpPostnoJson('payments/details', paymentRequest)
         .then(response => {

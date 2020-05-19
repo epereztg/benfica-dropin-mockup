@@ -1,6 +1,6 @@
-# Adyen Components sample code
+# Adyen Dropin sample code - Mockup on checkout page
 
-![Adyen Components Sample Code](screenshot.png)
+![Adyen Dropin sample code](screenshot.png)
 
 > ⚠️ **This repository is for demo purposes only**
 
@@ -41,20 +41,19 @@ $ npm start
 
 A Node.js server will start on `http://localhost:3000`.
 
-### Deploying this example to Heroku
 
-Alternatively, you can install this example by using this shortcut to deploy to Heroku:
+### Code added for dropin integration
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Adyen/adyen-components-js-sample-code)
+The code for dropin integration has been added at the end of the `index.html` file:
 
-## Documentation
+```
+<!-- Adyen -->
+<link rel="stylesheet" href="https://checkoutshopper-test.adyen.com/checkoutshopper/sdk/3.7.0/adyen.css">
+<link rel="stylesheet" href="./style.css">
+<script src="https://checkoutshopper-test.adyen.com/checkoutshopper/sdk/3.7.0/adyen.js"></script>
+<script src="./utils.js"></script>
+<script src="./dropin.js"></script>
+```
 
-For the complete integration guide, refer to the [Web Components documentation](https://docs.adyen.com/checkout/components-web/).
-
-## Other sample projects
-
-Find other sample projects in our [example projects repositories](https://github.com/adyen-examples).
-
-## License
-
-This repository is open source and available under the MIT license. For more information, see the LICENSE file.
+The code inserted in your custom style.css file after the adyen css file, will override the adyen dropin style.
+You can customize it as needed.
