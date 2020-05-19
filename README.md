@@ -22,7 +22,7 @@ These variables can be found in Adyen Customer Area. For more information, visit
 Navigate to the root of the project and run the `start.sh` script:
 
 ```
-$ cd adyen-components-js-sample-code
+$ cd benfica-mockup
 $ ./start.sh
 ```
 
@@ -34,7 +34,7 @@ If preferred, you can run a Node.js server instead.
 To do this, navigate to the root of the project, install the dependencies (only the first time) and run the start script:
 
 ```
-$ cd adyen-components-js-sample-code
+$ cd benfica-mockup
 $ npm i
 $ npm start
 ```
