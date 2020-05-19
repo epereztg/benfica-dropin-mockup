@@ -1,0 +1,104 @@
+
+.adyen-checkout__dropin {
+  /* width: 50%;
+  position: absolute; */
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+  left: 25%;
+  top: 50%;
+}
+/* .adyen-checkout__dropin adyen-checkout__dropin--ready{
+    border-style: dotted
+}
+.adyen-checkout__payment-methods-list{
+    border-style: none !important
+}
+.payment-method__container{
+    border-style: none !important
+} */
+
+
+
+.payment-method {
+    border-radius: 3px;
+    display: block;
+    margin: 0 -15px;
+    padding: 3em;
+    background: #f7f8f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 780px) {
+    .payment-method {
+        margin: 0 auto;
+    }
+}
+
+#bancontact-container,
+#wechatpay-container {
+    min-width: 70%;
+    max-width: 350px;
+}
+
+#dropin-container {
+    width: 450px;
+    align-items: center;
+}
+
+#boletobancario-container,
+#boletobancario-result-container {
+    width: 550px;
+}
+
+.payment-method__container {
+  /* width: 50%;
+  position: absolute; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  left: 25%;
+  top: 50%;
+}
+
+img:not(.website-loading){
+  opacity: 100
+}
+.adyen-checkout__payment-method__radio--selected{
+  background-color: red
+}
+.adyen-checkout__payment-method{
+  border-color: transparent;
+  border-style: none
+}
+
+.adyen-checkout__image adyen-checkout__image--loaded {
+  background-color: red;
+}
+.adyen-checkout__payment-method__image__wrapper:after{
+
+  display: none;
+}
+.adyen-checkout__payment-method{
+  background-color: white;
+
+}
+.adyen-checkout__payment-method__header{
+
+}
+.adyen-checkout__payment-method__image{
+  margin-right: 1em
+  display: inline-block;
+  display: inline-block;
+  float: right;
+}
+.adyen-checkout__status{
+  border-style: none
+}
+.adyen-checkout__status adyen-checkout__status--success{
+  border-style: none
+}
